@@ -61,5 +61,5 @@ $(document).ready(function(){
     
 
     initialize('miniMap');
-    createMarker(-9.033, 13.56,'Estrada de Catete, Km 44, Bengo – Angola')
+    createMarker(-9.033, 13.56,'Estrada de Catete, Km 44, Bengo – Angola');
 });
