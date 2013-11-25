@@ -17,8 +17,8 @@ google.load("feeds", "1");
 
 function lineFunc(data,i){
 	var title = data.attr("title").replace(/�/g,'ç');
-	return i>0 ?"<li class='noshow'><a target= '_parent' href='"+data.attr("link")+"'>" + title+"</a></li>"
-		:"<li><a target= '_parent' href='"+data.attr("link")+"'>" + title+"</a></li>";
+	return i>0 ?"<li class='noshow'><a target= '_blank' href='"+data.attr("link")+"'>" + title+"</a></li>"
+		:"<li><a target= '_blank' href='"+data.attr("link")+"'>" + title+"</a></li>";
 };
 
 
