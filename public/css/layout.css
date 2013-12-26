@@ -161,7 +161,9 @@ img#comp{
   color: #f0f0f0;
 }
 
-
+section#body{
+  margin-top: 40px;
+}
 
 #news{
     border:solid 1px whitesmoke;

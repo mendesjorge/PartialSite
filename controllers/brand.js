@@ -1,8 +1,8 @@
 exports.install = function(framework) {
-        framework.route('/maquina/{name}', view_machine);
+        framework.route('/marca/{name}', view_brand);
 };
 
-function view_machine(name){
+function view_brand(name){
     console.log(name);
 	this.view(name);
 }
