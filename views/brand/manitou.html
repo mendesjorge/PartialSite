@@ -5,17 +5,45 @@
     @{head('<meta charset="utf-8" />')}
     @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
     @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
 </head>
 <body>
 
 	<img src='/img/partners/manitou.jpg' link='http://www.pt.manitou.com/'></img>
 
-	<ul>
-		<li>
-			<a href="http://www.pt.manitou.com/manitou/pt/type/1/product/37-mt-1440-h">MT 1440 H Empilhador telescópico </a>
-		</li>
+	<ul id='slideMaq'>
+		<li><a href="maquina/MT-1235">
+			<img id='machine' src='/img/machines/MT-1235-small.jpg'/>
+			<span>MT 1235 H</span>
+		</a></li>
+		<li><a href="maquina/MT-1440">
+			<img id='machine' src='/img/machines/MT-1440-small.jpg'/>
+			<span>MT 1440 H</span>
+		</a></li>
+		<li><a href="maquina/MT-1740">
+			<img id='machine' src='/img/machines/MT-1740-small.jpg'/>
+			<span>MT 1740 H</span>
+		</a></li>
+		<li><a href="maquina/MT-1740">
+			<img id='machine' src='/img/machines/MT-1740-small.jpg'/>
+			<span>MT 1740 H</span>
+		</a></li>
+		<li><a href="maquina/MT-1740">
+			<img id='machine' src='/img/machines/MT-1740-small.jpg'/>
+			<span>MT 1740 H</span>
+		</a></li>
 	</ul>
+	<a href="http://www.pt.manitou.com/manitou/pt/market/3-industry"> Estes e mais modelos aqui</a>
+	<script type="text/javascript">
 
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 3
+			});
+		});
+	</script>
 
 </body>
 </html>
