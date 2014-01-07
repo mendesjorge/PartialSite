@@ -1,7 +1,12 @@
-function imgGoTo(){
+function imgGoToBlank(){
 	var link = $(this).attr('link');
 	window.open(link, '_blank');
 }
+function imgGoToParent(){
+	var link = $(this).attr('link');
+	window.open(link, '_parent');
+}
 $(document).ready(function(){
-	$('#partners img').click(imgGoTo);
+	$('.ltb').click(imgGoToBlank);
+	$('.ltp').click(imgGoToParent);
 });

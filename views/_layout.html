@@ -10,20 +10,49 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<link rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon'>
 	<link rel='icon' href='/img/favicon.ico' type='image/x-icon'>
+	<link rel="stylesheet" href="/css/lib/flexisel.css"/>
 	<script type='text/javascript'src="/js/lib/jquery.flexisel.js"></script>
     @{head}
 
 </head>
 <body>
 	<div id='container'>
-		<div id='partners'>
-			<img src='/img/partners/manitou.jpg' link='http://www.pt.manitou.com/'></img>
-			<img src='/img/partners/ammann.jpg' link='http://www.ammann-group.com/'></img>
-			<img src='/img/partners/jungheinrich.jpg' link='http://www.jungheinrich.com/'></img>
-			<img src='/img/partners/kalmar.jpg' link='http://www.cargotec.com/'></img>
-			<img src='/img/partners/compair.jpg' link='http://www.compair.pt/'></img>
-			<img src='/img/partners/fassi.jpg' link='http://www.fassi.com/'></img>
-		</div>
+		<ul id='partners' style="display:none">
+			<li>
+				<img class ='ltb' src='/img/partners/manitou.jpg' link='http://www.pt.manitou.com/'></img>
+			</li>
+			<li>
+				<img class ='ltb' src='/img/partners/ammann.jpg' link='http://www.ammann-group.com/'></img>
+			</li>
+			<li>
+				<img class ='ltb' src='/img/partners/jungheinrich.jpg' link='http://www.jungheinrich.com/'></img>
+			</li>
+			<li>
+				<img class ='ltb' src='/img/partners/kalmar.jpg' link='http://www.cargotec.com/'></img>
+			</li>
+			<li>
+				<img class ='ltb' src='/img/partners/compair.jpg' link='http://www.compair.pt/'></img>
+			</li>
+			<li>
+				<img class ='ltb' src='/img/partners/fassi.jpg' link='http://www.fassi.com/'></img>
+			</li>
+			
+		</ul>
+
+	<script type="text/javascript">
+
+		$(window).on("load",function(){
+			$('#partners').flexisel({
+				clone: true,
+				visibleItems: 5,
+				animationSpeed: 1000,
+		        autoPlay: true,
+		        autoPlaySpeed: 3000,            
+		        pauseOnHover: true
+			});
+		});
+	</script>
+
 		<nav>
 			<a href='/'>
 			<img id='comp' src="/img/partners/maqman.png"></img>

@@ -10,6 +10,7 @@ display:none;
 .nbs-flexisel-container {
     position:relative;
     max-width:100%;
+    display: inline-block;
 }
 .nbs-flexisel-ul {
     position:relative;
