@@ -5,7 +5,7 @@
 // to slide a set of images in a class called 'sp'
 
 var timer;
-var autoSliderTime = 5000;
+var autoSliderTime = 2500;
 
 var nextImg = function(){
     var oldElem = $('.active').removeClass('active');
@@ -27,7 +27,7 @@ var nextImg = function(){
 $(document).ready(function() {
     $('.sp').first().addClass('active');
     $('.sp').hide();    
-    $('.active').show();
+    $('.active').fadeIn();
 
     timer = setInterval(nextImg, autoSliderTime);
 
@@ -47,4 +47,11 @@ $(document).ready(function() {
         clearInterval(timer);
         timer = setInterval(nextImg, autoSliderTime);
     });
+
+    $('div#slider').hover(function(){
+        clearInterval(timer)
+    }, function(){
+        timer = setInterval(nextImg, autoSliderTime);
+    });
+
 });

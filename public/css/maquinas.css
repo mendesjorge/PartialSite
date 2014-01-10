@@ -2,6 +2,76 @@
 	display: -webkit-inline-box;
 	width:50%;
 	font-family:tahoma;
-	font-size:small;
-	margin-top: 40px;
+}
+
+div#slider{
+	margin-top: 5px;
+}
+
+div#slider button{
+
+}
+
+div#left, div#right{
+	padding-top: 5px;
+	padding-right: 3px;
+}
+
+div#left{
+	margin-left: 40%;
+}
+
+h1{
+	font-weight: 700;
+	font-size: 40px;
+	margin: 0px;
+}
+h2{
+	margin-top: 0px;
+	color:#FE0000;
+}
+
+div#toShow{
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	background-color: #585858;
+	text-align: center;
+}
+
+img.sp{
+	max-width: 400px;
+	max-height: 400px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+table#info{
+	font-size: small;
+	margin-top: 62px;
+}
+
+table#info > thead {
+  float: left;   
+}
+
+table#info th,table#info td{
+  display: block;   
+}
+
+table#info > tbody {
+  float: right;   
+}
+
+table#info > caption{
+	font-size: 17px;
+	color: #ACACAC;
+	font-weight: 700;
 }
