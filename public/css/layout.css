@@ -217,6 +217,6 @@ section#body{
   cursor: pointer;
   color:#999999;
 }
-span:hover{
+h1 > span:hover{
   color:#000000;
 }
