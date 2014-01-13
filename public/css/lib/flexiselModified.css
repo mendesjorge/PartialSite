@@ -1,0 +1,73 @@
+/*#flexiselMDemo1, #flexiselMDemo2, #flexiselMDemo3 {
+display:none;
+}*/
+
+.nbs-flexiselM-container {
+    position:relative;
+    max-width:100%;
+    display: inline-block;
+}
+.nbs-flexiselM-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexiselM-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+    background:#fcfcfc;
+    background: #fcfcfc -moz-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* FF3.6+ */
+    background: #fcfcfc -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eee)); /* Chrome,Safari4+ */
+    background: #fcfcfc -webkit-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* Chrome10+,Safari5.1+ */
+    background: #fcfcfc -o-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* Opera11.10+ */
+    background: #fcfcfc -ms-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* IE10+ */
+    background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eee 100%); /* W3C */
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;  
+}
+
+.nbs-flexiselM-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexiselM-item img {
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:100px;
+    max-height:100px;
+}
+
+/*** Navigation ***/
+
+/*.nbs-flexiselM-nav-left,
+.nbs-flexiselM-nav-right {
+    width: 22px;
+    height: 22px; 
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.5;
+}
+
+.nbs-flexiselM-nav-left {
+    left: 10px;
+    background: url(/img/button-previous.png) no-repeat;
+}
+
+.nbs-flexiselM-nav-right {
+    right: 5px;
+    background: url(/img/button-next.png) no-repeat;
+}*/

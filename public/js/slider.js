@@ -19,9 +19,6 @@ var nextImg = function(){
 
     oldElem.fadeOut();
     $('.active').fadeIn();
-
-    clearInterval(timer);
-    timer = setInterval(nextImg, autoSliderTime);
 };
 
 $(document).ready(function() {
@@ -43,9 +40,6 @@ $(document).ready(function() {
         }
         oldElem.fadeOut();
         $('.active').fadeIn();
-
-        clearInterval(timer);
-        timer = setInterval(nextImg, autoSliderTime);
     });
 
     $('div#slider').hover(function(){

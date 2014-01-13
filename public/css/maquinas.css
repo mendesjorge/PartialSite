@@ -65,6 +65,9 @@ table#info > thead {
 table#info th,table#info td{
   display: block;   
 }
+table#info th{
+	text-align: right;
+}
 
 table#info > tbody {
   float: right;   

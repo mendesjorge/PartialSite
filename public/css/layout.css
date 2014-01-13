@@ -66,7 +66,7 @@ img#comp{
   -o-transition: color .15s;
   transition: color .15s;
 }
-#cssmenu > ul > li > a:hover {
+#cssmenu > ul > li > a > span:hover {
   color: #fae500;
 }
 
@@ -211,4 +211,12 @@ section#body{
 
 .noshow{
     display:none;
+}
+
+.ltb{
+  cursor: pointer;
+  color:#999999;
+}
+span:hover{
+  color:#000000;
 }

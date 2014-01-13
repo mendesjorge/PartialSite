@@ -12,6 +12,7 @@
     $.fn.flexisel = function(options) {
 	
         var defaults = $.extend({
+            css : "flexisel",
             visibleItems : 4,
             animationSpeed : 200,
             autoPlay : false,
@@ -92,17 +93,17 @@
             Add additional markup needed by plugin to the DOM
 	    *******************************/
             appendHTML : function() {
-                object.addClass("nbs-flexisel-ul");
-                object.wrap("<div class='nbs-flexisel-container'><div class='nbs-flexisel-inner'></div></div>");
-                object.find("li").addClass("nbs-flexisel-item");
+                object.addClass("nbs-"+settings.css+"-ul");
+                object.wrap("<div class='nbs-"+settings.css+"-container'><div class='nbs-"+settings.css+"-inner'></div></div>");
+                object.find("li").addClass("nbs-"+settings.css+"-item");
 
                 if (settings.setMaxWidthAndHeight) {
-                    var baseWidth = $(".nbs-flexisel-item img").width();
-                    var baseHeight = $(".nbs-flexisel-item img").height();
-                    $(".nbs-flexisel-item img").css("max-width", baseWidth);
-                    $(".nbs-flexisel-item img").css("max-height", baseHeight);
+                    var baseWidth = $(".nbs-"+settings.css+"-item img").width();
+                    var baseHeight = $(".nbs-"+settings.css+"-item img").height();
+                    $(".nbs-"+settings.css+"-item img").css("max-width", baseWidth);
+                    $(".nbs-"+settings.css+"-item img").css("max-height", baseHeight);
                 }
-                $("<div class='nbs-flexisel-nav-left'></div><div class='nbs-flexisel-nav-right'></div>").insertAfter(object);
+                $("<div class='nbs-"+settings.css+"-nav-left'></div><div class='nbs-"+settings.css+"-nav-right'></div>").insertAfter(object);
                 if (settings.clone) {
                     var cloneContent = object.children().clone();
                     object.append(cloneContent);
@@ -116,8 +117,8 @@
 
                 var listParent = object.parent();
                 var childSet = object.children();
-                var leftArrow = listParent.find($(".nbs-flexisel-nav-left"));
-                var rightArrow = listParent.find($(".nbs-flexisel-nav-right"));
+                var leftArrow = listParent.find($(".nbs-"+settings.css+"-nav-left"));
+                var rightArrow = listParent.find($(".nbs-"+settings.css+"-nav-right"));
 
                 $(window).on("resize", function(event) {
 
@@ -152,7 +153,7 @@
                     methods.scrollRight();
                 });
                 if (settings.pauseOnHover == true) {
-                    $(".nbs-flexisel-item").on({
+                    $(settings.css+"-item").on({
                         mouseenter : function() {
                             canNavigate = false;
                         },

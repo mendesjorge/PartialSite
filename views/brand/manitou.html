@@ -10,9 +10,17 @@
 </head>
 <body>
 
-	<img class ='ltb' src='/img/partners/manitou.jpg' link='http://www.pt.manitou.com/'></img>
+	<div>
+		<img class ='ltb' src='/img/partners/manitou.jpg' link='http://www.pt.manitou.com/manitou/pt/market/3-industry'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
 
 	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/MI-25'>
+			<img class='machine' src='/img/machines/MI-25.30.35-small.png'/>
+			<span>MI 25/30/35</span>
+		</li>
 		<li class ='ltp' link='/maquina/MT-1235'>
 			<img class='machine' src='/img/machines/MT-1235-small.jpg'/>
 			<span>MT 1235 H</span>
@@ -25,22 +33,14 @@
 			<img class='machine' src='/img/machines/MT-1740-small.png'/>
 			<span>MT 1740 H</span>
 		</li>
-		<li class ='ltp' link='/maquina/MT-1740'>
-			<img class='machine' src='/img/machines/MT-1740-small.png'/>
-			<span>MT 1740 H</span>
-		</li>
-		<li class ='ltp' link='/maquina/MT-1740'>
-			<img class='machine' src='/img/machines/MT-1740-small.png'/>
-			<span>MT 1740 H</span>
-		</li>
 	</ul>
-	<a href="http://www.pt.manitou.com/manitou/pt/market/3-industry"> Estes e mais modelos aqui</a>
 	<script type="text/javascript">
 
+		$('#slideMaq').hide();
 		$(window).on("load",function(){
 			$('#slideMaq').flexisel({
 				clone: false,
-				visibleItems: 5
+				visibleItems: 4
 			});
 		});
 	</script>
