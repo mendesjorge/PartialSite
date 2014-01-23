@@ -44,17 +44,17 @@ function createMarker(lat, long, name) {
     //create info window
     var infowindow = new google.maps.InfoWindow(
       {
-          content: '<div id="content">'+ name+ '</div>',
-          size: new google.maps.Size(50, 50)
+          content: '<div id="content" style="width:255px;height:20px">' +name+ '</div>',
+          size: new google.maps.Size(53, 53)
       });
     //add info window to marker
-    google.maps.event.addListener(markerr, 'click', function () {
+    //google.maps.event.addListener(markerr, 'click', function () {
         //map.setZoom(8);
         //map.setCenter(marker.getPosition());
         
         //opens a text window
-        infowindow.open(map, this);
-    });
+        infowindow.open(map, markerr);
+    //});
     return markerr;
 };
 $(document).ready(function(){
