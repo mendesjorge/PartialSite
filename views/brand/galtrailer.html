@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/galtrailer.png' link='http://www.pt.manitou.com/manitou/pt/market/3-industry'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/MI-25'>
+			<img class='machine' src='/img/machines/MI-25.30.35-small.png'/>
+			<span>Porta Máquinas 3 eixos</span>
+		</li>
+		<li class ='ltp' link='/maquina/MT-1235'>
+			<img class='machine' src='/img/machines/MT-1235-small.jpg'/>
+			<span>MT 1235</span>
+		</li>
+		<li class ='ltp' link='/maquina/MT-1440'>
+			<img class='machine' src='/img/machines/MT-1440.1740-small.png'/>
+			<span>MT 1440</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+		});
+	</script>
+
+</body>
+</html>
