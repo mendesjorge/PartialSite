@@ -1,10 +1,14 @@
 {
   "name": "PartialSite",
   "subdomain": "maqman",
+  "domains": [
+    "maqman.net",
+    "www.maqman.net"
+  ],
   "scripts": {
     "start": "node server.js"
   },
-  "version": "0.0.0-4",
+  "version": "0.0.0-6",
   "engines": {
     "node": "0.10.x"
   },
