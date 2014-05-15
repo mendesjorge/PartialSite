@@ -4,6 +4,10 @@
 		@{head('<link rel="stylesheet" href="css/main.css"/>')}
 	</head>
 	<body>
+
+		<ul class="frontNews">
+			@{template('frontNews',model)}
+		</ul>
 		<div class='text'>
 			<div id='left'>
 				<h3>Português</h3>
@@ -24,17 +28,6 @@
 				Our MISSION is provide solutions for the handling of loads and people to support industrial activities, with a special focus in the areas of Distribution, Construction and Public/Estate works, adding quality, warranty and value to the projects.
 				</p>
 
-			</div>
-		</div>
-		<div id="slider">
-			<div id="nav">
-				<button id="previous">Previous</button>
-				<button id="next">Next</button>
-			</div>
-			<div id="toShow">
-				<img class="sp" src="/img/presentation/caterpillar.jpg"/>
-				<img class="sp" src="/img/presentation/maquina2.jpg"/>
-				<img class="sp" src="/img/presentation/maquinas.jpg"/>
 			</div>
 		</div>
 	</body>    

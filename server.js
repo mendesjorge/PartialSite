@@ -1,4 +1,4 @@
-var framework = require('partial.js');
+var framework = require('total.js');
 var http = require('http');
 var fs = require('fs');
 
@@ -14,6 +14,26 @@ var errorPage = function(req,res){
 			res.end();
 
 	});
+};
+
+
+framework.onAuthorization = function(req,res,flags,next){
+	var cookie = req.cookie(this.config.cookie);
+
+	if (cookie === null || cookie.length < 10) {
+		next(false);
+		return;
+	}
+	
+	var userId = this.decrypt(cookie,'user').id;
+
+	if (userId === 0 && userId !== 7){
+		next(false);
+		return;
+	}
+	console.log(userId);
+	req.user = 7;
+	next(true);
 };
 
 // server start
