@@ -31,7 +31,6 @@ framework.onAuthorization = function(req,res,flags,next){
 		next(false);
 		return;
 	}
-	console.log(userId);
 	req.user = 7;
 	next(true);
 };

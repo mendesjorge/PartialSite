@@ -71,7 +71,7 @@ img#comp{
 }
 #cssmenu > ul > li {
   float: left;
-  margin-left: 15px;
+  margin-left: 7px;
   position: relative;
 }
 #cssmenu > ul > li > a {

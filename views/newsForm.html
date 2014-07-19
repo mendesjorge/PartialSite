@@ -1,11 +1,29 @@
 <html>
 	<head>
-		
+		@{head('<script src="js/previewNews.js"></script>')}
 	</head>
 	<body>
-		
+		<div class ='AddNewsFrom'>
+			<form action='news' method='POST'>
+				<textarea col='40' rows='10' id='newsText' name='text' maxlength="1000" autofocus></textarea>
+				<br/>
+				<input type="radio" class="newsFormRadio" name="banner" id="ex1" value="img/news/banner1" checked />
+    			<label for="banner1" class="label">Geral</label>
+    			<br/>
+    			<input type="radio" class="newsFormRadio" name="banner" id="ex2" value="img/news/banner2"/>
+    			<label for="banner2" class="label">Novidades</label>
+    			<br/>
+    			<input type="radio" class="newsFormRadio" name="banner" id="ex3" value="img/news/banner3"/>
+    			<label for="banner3" class="label">Conferencias</label>
+				<br/>
+				<input type ='submit' id='submit'/>
+				<button type='button' id='preview'>Prever</button>
+			</form>
+			<div class='FrontNews' id="previewShow"/>
 
-		<div class='currentNews'>
+		</div>
+
+		<div class='FrontNews'>
 			@{template('frontNews',model)}
 		</div>
 	</body>

@@ -1,5 +1,24 @@
 var fs = require('fs');
 
+var jfile = null;
+
+function convNewsTemplate(model){
+	var prop = Object.keys(model);
+	var ret = {link:null ,html:'' };
+
+	var first = model[prop[0]];
+	if(first.contains('img/news/')){
+		ret.html = model[prop[1]];
+		ret.link = first;
+	} else{
+		ret.html = first;
+		ret.link = model[prop[1]];
+	}
+
+	return ret;
+
+}
+
 exports.install = function(framework) {
 	  framework.route('/', view_homepage);
 
@@ -24,29 +43,24 @@ function view_newsForm(){
 		this.view('login');
 		return;
 	  }
-	  var jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
+	  jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
 	  this.view('newsForm',jfile);
 }
 
 function view_homepage() {
 	  
-	  var jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
+	  jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
 	  this.view('homepage',jfile);
 }
 
 function post_news(){
-	  var model = this.post;
-	  var resp = this.validate(model,'addnews');
+	var model = this.post;
 
+	jfile = [convNewsTemplate(model)].concat(jfile);
+	fs.writeFileSync('contents/newsFile.json',JSON.stringify(jfile));
 
-	  if(resp.hasError()){
-		    this.json(resp);
-		    return;
-	  }
-
-	  model = builders.prepare('contactform',model);
-	  console.log(model);
-	  this.redirect('/news');
+	console.log(model);
+	this.redirect('/news');
 
 }
 
