@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/sumitomo.gif' link='http://www.sumitomokenki.com/'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/SH210-5'>
+			<img class='machine' src='/img/machines/SH210-5-1.jpg'/>
+			<span>SH210-5</span>
+		</li>
+		<li class ='ltp' link='/maquina/SH300-5'>
+			<img class='machine' src='/img/machines/SH300-5-1.jpg'/>
+			<span>SH300-5</span>
+		</li>
+		<li class ='ltp' link='/maquina/SH350HD-5'>
+			<img class='machine' src='/img/machines/SH350HD-5-1.jpg'/>
+			<span>SH350HD-5</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+			$(".nbs-flexisel-inner").height(132);
+		});
+	</script>
+
+</body>
+</html>
