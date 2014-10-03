@@ -191,9 +191,9 @@ section#body{
     border-radius: 15px 15px 0px 0px;
     bottom: 0px;
     height: 39px;
-    width: 98.5%;
+    width: 74.5%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 12%;
     position: fixed;
     background-color: red;
     overflow: hidden;
