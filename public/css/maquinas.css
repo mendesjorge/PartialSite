@@ -5,11 +5,19 @@
 }
 
 div#slider{
+	background: #E3E3DD;
 	margin-top: 5px;
+	border: solid 1px;
+	border-radius: 7px;
 }
 
 div#slider button{
-
+	background: #F80808;
+	color:#fff;
+	border: transparent;
+	border-radius: 2px;
+	height: 23px;
+	margin: 5px;
 }
 
 div#left, div#right{
@@ -36,7 +44,7 @@ div#toShow{
 	height: 400px;
 	overflow: hidden;
 	position: relative;
-	background-color: #585858;
+	/*background-color: #585858;*/
 	text-align: center;
 }
 
