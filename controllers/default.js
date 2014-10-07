@@ -33,6 +33,7 @@ exports.install = function(framework) {
 	  framework.route('/assistencia',view_assist);
 	  framework.route('/aluguer',view_rent);
 	  framework.route('/pecas',view_parts);
+	  framework.route('/quemsomos',view_info);
 	  framework.route('#404', view_404);
 	  
 };
@@ -110,6 +111,9 @@ function view_rent(){
 }
 function view_parts(){
 	  this.view('pecas');
+}
+function view_info(){
+	this.view('quemsomos');
 }
 
 function view_404(){
