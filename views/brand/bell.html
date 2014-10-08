@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/bell.png' link='http://www.bellequipment.com'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/315-SK-4WD'>
+			<img class='machine' src='/img/machines/315-SK-4WD-small.jpg'/>
+			<span>315-SK-4WD</span>
+		</li>
+		<li class ='ltp' link='/maquina/B30-E'>
+			<img class='machine' src='/img/machines/B30-E-small.jpg'/>
+			<span>B30 E</span>
+		</li>
+		<li class ='ltp' link='/maquina/B40-E'>
+			<img class='machine' src='/img/machines/B40-E-small.jpg'/>
+			<span>B40 E</span>
+		</li>
+		<li class ='ltp' link='/maquina/770-G'>
+			<img class='machine' src='/img/machines/770-G-small.jpg'/>
+			<span>770 G/772 G</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+			$(".nbs-flexisel-inner").height(132);
+		});
+	</script>
+
+</body>
+</html>
