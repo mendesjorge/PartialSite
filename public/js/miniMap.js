@@ -25,12 +25,12 @@ function initialize(area) {
     
     //apply options
     if (area === undefined)
-        throw new Error('Needed first parameter, "area", on initializing map');;
+        throw new Error('Needed first parameter, "area", on initializing map');
     //create map
     map = new google.maps.Map(document.getElementById(area),
         mapOptions);
 
-};
+}
 
 //create a marker
 function createMarker(lat, long, name) {
@@ -56,10 +56,11 @@ function createMarker(lat, long, name) {
         infowindow.open(map, markerr);
     //});
     return markerr;
-};
+}
+
 $(document).ready(function(){
     
 
     initialize('miniMap');
-    createMarker(-9.033, 13.56,'Estrada de Catete, Km 44, Bengo – Angola');
+    createMarker(-9.039959, 13.578758,'Estrada de Catete, Km 44, Bengo – Angola');
 });
