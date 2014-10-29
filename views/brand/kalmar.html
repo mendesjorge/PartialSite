@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/kalmar.png' link='http://www.kalmarglobal.com/'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/DCE-150'>
+			<img class='machine' src='/img/machines/DCE-150-small.png'/>
+			<span>DCE 150</span>
+		</li>
+		<li class ='ltp' link='/maquina/DCT-90'>
+			<img class='machine' src='/img/machines/DCT-90-small.png'/>
+			<span>DCT 90</span>
+		</li>
+		<li class ='ltp' link='/maquina/DRT-450'>
+			<img class='machine' src='/img/machines/DRT-450-small.png'/>
+			<span>DRT 450</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+			$(".nbs-flexisel-inner").height(132);
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/compair.png' link='http://www.compair.pt/'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/C-50'>
+			<img class='machine' src='/img/machines/C-50-small.png'/>
+			<span>C 50</span>
+		</li>
+		<li class ='ltp' link='/maquina/C-125'>
+			<img class='machine' src='/img/machines/C-125-small.png'/>
+			<span>C 125</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+			$(".nbs-flexisel-inner").height(132);
+		});
+	</script>
+
+</body>
+</html>
