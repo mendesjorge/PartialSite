@@ -4,3 +4,17 @@
 	font-family:tahoma;
 	font-size:small;
 }
+
+div#brands{
+	padding-top: 50px;
+}
+
+div#brands > img{
+	padding-right: 4px;
+	background-color: #fcfcfc;
+	-webkit-border-radius: 5px;
+	cursor: pointer;
+	padding: 2px;
+	margin-right: 15px;
+	height: 40px;
+}

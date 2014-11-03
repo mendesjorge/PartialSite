@@ -27,6 +27,7 @@ exports.install = function(framework) {
 	  
 	  framework.route('/login',view_login,['get']);
 	  framework.route('/login',post_login,['post']);
+	  framework.route('/logout',view_logout,['get']);
 
 	  framework.route('/contactos',view_contacts);
 	  framework.route('/vendas',view_sells);
@@ -93,6 +94,11 @@ function post_login(){
 
 		    self.redirect('/news');
 	  }
+}
+
+function view_logout(){
+	this.res.cookie(this.config.cookie, '', new Date().add('y', -1));
+	this.redirect('/');
 }
 
 function view_contacts(){
