@@ -22,9 +22,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7b7b7', end
 
 div#container{
   width: 1000px;
-  height: 700px;
   margin-left:auto;
   margin-right:auto;
+  margin-bottom: 45px;
 }
 
 /*#partners{
