@@ -203,10 +203,10 @@ section#body{
 
 #news a{
     color:white;
-    font-family: serif;
+    font-family: trebuchet ms, bold;
     text-decoration: none;
     font-style: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #news ul{
