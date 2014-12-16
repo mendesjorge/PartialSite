@@ -2,7 +2,7 @@ var framework = require('total.js');
 var http = require('http');
 var fs = require('fs');
 
-var port = 8004;
+var port = process.env.PORT || 8004;
 var debug = true;
 
 //	methods
