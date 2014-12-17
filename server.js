@@ -1,4 +1,4 @@
-var framework = require('total.js').http('release');
+var framework = require('total.js');
 var http = require('http');
 var fs = require('fs');
 
