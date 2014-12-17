@@ -1,4 +1,4 @@
-var framework = require('total.js');
+var framework = require('total.js').http('release');
 var http = require('http');
 var fs = require('fs');
 
@@ -39,4 +39,4 @@ framework.onAuthorization = function(req,res,flags,next){
 
 
 framework.run(http, debug, port);
-console.log('http://{0}:{1}/'.format(framework.ip, framework.port));
+console.log('http://{0}:{1}/',framework.ip, framework.port);

@@ -13,6 +13,6 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "partial.js": "x.x.x"
+    "total.js": "x.x.x"
   }
 }
