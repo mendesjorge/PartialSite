@@ -3,7 +3,7 @@ var http = require('http');
 var fs = require('fs');
 
 var port = process.env.PORT || 8004;
-var debug = true;
+var debug = false;
 
 //	methods
 
@@ -39,4 +39,4 @@ framework.onAuthorization = function(req,res,flags,next){
 
 
 framework.run(http, debug, port);
-console.log('http://{0}:{1}/',framework.ip, framework.port);
+console.log('http://%s:%d/',framework.ip, framework.port);
