@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @{head('<title>Custom headers</title>')}
+    @{head('<meta charset="utf-8" />')}
+    @{head('<meta http-equiv="X-UA-Compatible" content="IE=10" />')}
+    @{head('<meta name="format-detection" content="telephone=no"/>')}
+    @{head('<link rel="stylesheet" href="/css/marca.css"/>')}
+    @{head('<link rel="stylesheet" href="/css/lib/flexisel.css"/>')}
+</head>
+<body>
+
+	<div>
+		<img class ='ltb' src='/img/partners/jungheinrich.png' link='http://www.jungheinrich.com/'></img>
+		<span> - Outros modelos disponiveis</span>
+	<div>
+	<p/>
+
+	<ul id='slideMaq'>
+		<li class ='ltp' link='/maquina/EFG-215'>
+			<img class='machine' src='/img/machines/EFG-215-small.png'/>
+			<span>EFG 215/220</span>
+		</li>
+		<li class ='ltp' link='/maquina/ETV-216'>
+			<img class='machine' src='/img/machines/ETV-216-small.png'/>
+			<span>ETV 216</span>
+		</li>
+		<li class ='ltp' link='/maquina/EJE-120'>
+			<img class='machine' src='/img/machines/EJE-120-small.png'/>
+			<span>EJE 120</span>
+		</li>
+		<li class ='ltp' link='/maquina/AM-22'>
+			<img class='machine' src='/img/machines/AM-22-small.png'/>
+			<span>AM 22</span>
+		</li>
+	</ul>
+	<script type="text/javascript">
+
+		$('#slideMaq').hide();
+		$(window).on("load",function(){
+			$('#slideMaq').flexisel({
+				clone: false,
+				visibleItems: 4
+			});
+			$(".nbs-flexisel-inner").height(132);
+		});
+	</script>
+
+</body>
+</html>
