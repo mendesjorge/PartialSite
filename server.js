@@ -3,7 +3,7 @@ var http = require('http');
 var fs = require('fs');
 
 var port = process.env.PORT || 8004;
-var debug = false;
+var debug = port == 8004;
 
 //	methods
 
