@@ -26,7 +26,7 @@ div#left, div#right{
 }
 
 div#left{
-	margin-left: 40%;
+	margin-left: 35%;
 }
 
 div#left h1{
@@ -64,6 +64,9 @@ img.sp{
 table#info{
 	font-size: small;
 	margin-top: 62px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 187px;
 }
 
 table#info > thead {
