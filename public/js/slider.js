@@ -8,38 +8,38 @@ var timer;
 var autoSliderTime = 2500;
 
 var nextImg = function(){
-    var oldElem = $('.active').removeClass('active');
+    var oldElem = $('.activeElem').removeClass('activeElem');
 
     if ( oldElem.is(':last-child')) {
-        $('.sp').first().addClass('active');
+        $('.sp').first().addClass('activeElem');
     }
     else {
-        oldElem.next().addClass('active');
+        oldElem.next().addClass('activeElem');
     }
 
     oldElem.fadeOut();
-    $('.active').fadeIn();
+    $('.activeElem').fadeIn();
 };
 
 $(document).ready(function() {
-    $('.sp').first().addClass('active');
+    $('.sp').first().addClass('activeElem');
     $('.sp').hide();    
-    $('.active').fadeIn();
+    $('.activeElem').fadeIn();
 
     timer = setInterval(nextImg, autoSliderTime);
 
     $('button#next').click(nextImg);
 
     $('button#previous').click(function() {
-        var oldElem = $('.active').removeClass('active');    
+        var oldElem = $('.activeElem').removeClass('activeElem');    
         if ( oldElem.is(':first-child')) {
-            $('.sp').last().addClass('active');
+            $('.sp').last().addClass('activeElem');
         }
         else {
-            oldElem.prev().addClass('active');
+            oldElem.prev().addClass('activeElem');
         }
         oldElem.fadeOut();
-        $('.active').fadeIn();
+        $('.activeElem').fadeIn();
     });
 
     $('div#slider').hover(function(){
