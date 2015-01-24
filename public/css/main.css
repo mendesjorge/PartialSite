@@ -29,3 +29,9 @@ div.text div#left, div.text div#right{
    background-color: #DDD;
    border-right: 1px solid gray;
 }
+
+.frontNews span{
+	position: absolute;
+	margin-left: 210px;
+	margin-top: 54px;
+}
