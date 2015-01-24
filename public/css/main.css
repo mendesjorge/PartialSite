@@ -32,9 +32,9 @@ div.text div#left, div.text div#right{
 
 .frontNews span{
 	position: absolute;
-	margin-left: 412px;
-	margin-top: 240px;
+	margin-left: 408px;
+	margin-top: 237px;
 	font-family: trebuchet ms;
-	font-size: medium;
-	color: #525252;
+	font-size: 14px;
+	color: #282828;
 }
