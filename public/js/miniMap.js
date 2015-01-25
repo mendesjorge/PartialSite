@@ -19,7 +19,7 @@ function initialize(area) {
             style: google.maps.ZoomControlStyle.LARGE,
             position: google.maps.ControlPosition.LEFT_CENTER
         },
-        minZoom: 3,
+        minZoom: 5,
         maxZoom: 20,
     };
     
