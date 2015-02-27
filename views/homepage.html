@@ -2,11 +2,12 @@
 	<head>
 		@{head('<script src="js/slider.js"></script>')}
 		@{head('<script src="js/lib/jquery.lightSlider.js"></script>')}
+		@{head('<script src="js/newsTextWork.js"></script>')}
 		@{head('<link type="text/css" rel="stylesheet" href="css/lib/lightSlider.css" />')}
 		@{head('<link rel="stylesheet" href="css/main.css"/>')}
 		@{head('<script type="text/javascript">
 			$(document).ready(function() {
-    
+
     			$(".frontNews").lightSlider({
 					gallery: false,
 	    			item: 1,
@@ -14,6 +15,7 @@
 	    			slideMargin: 0,
 	    			thumbItem: 9
     			});
+
 			});
 		</script>')}
 

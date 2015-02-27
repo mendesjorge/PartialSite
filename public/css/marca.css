@@ -25,3 +25,14 @@ ul#slideMaq > li > span{
 	font-family: sans-serif;
 	font-size: 11px;
 }
+
+img.status-ofl{
+	position: absolute;
+	top: 30%;
+	left: 24%;
+}
+img.status-new{
+	position:absolute;
+	top: 0%;
+	left: 24%;
+}

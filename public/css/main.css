@@ -30,11 +30,12 @@ div.text div#left, div.text div#right{
    border-right: 1px solid gray;
 }
 
-.frontNews span{
+.frontNews p{
 	position: absolute;
 	margin-left: 408px;
 	margin-top: 237px;
 	font-family: trebuchet ms;
 	font-size: 14px;
 	color: #282828;
+	width: 600px;
 }

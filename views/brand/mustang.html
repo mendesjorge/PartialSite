@@ -20,9 +20,13 @@
 			<img class='machine' src='/img/machines/Must-2041-small.png'/>
 			<span>Skid Steer Loader 2041</span>
 		</li>
-		<li class ='ltp' link='/maquina/Must-2056'>
-			<img class='machine' src='/img/machines/Must-2056-small.png'/>
+		<li class ='ltp' status=ofl link='/maquina/Must-2056'>
+			<img class='machine'src='/img/machines/Must-2056-small.png'/>
 			<span>Skid Steer Loader 2056</span>
+		</li>
+		<li class ='ltp' status=new link='/maquina/Must-1900R'>
+			<img class='machine' src='/img/machines/Must-1900R-small.png'/>
+			<span>Skid Steer Loader 1900R</span>
 		</li>
 	</ul>
 	<p/>
@@ -31,6 +35,7 @@
 
 		$('#slideMaq').hide();
 		$(window).on("load",function(){
+			setImagesStatus();
 			$('#slideMaq').flexisel({
 				clone: false,
 				visibleItems: 4

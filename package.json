@@ -1,5 +1,5 @@
 {
-  "name": "PartialSite",
+  "name": "MaqmanSite",
   "subdomain": "maqman",
   "domains": [
     "maqman.net",
@@ -8,11 +8,11 @@
   "scripts": {
     "start": "node server.js"
   },
-  "version": "0.0.0-6",
+  "version": "0.0.1-2",
   "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
-    "total.js": "x.x.x"
+    "total.js": "1.4.0"
   }
 }

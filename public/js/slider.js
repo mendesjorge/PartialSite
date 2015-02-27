@@ -22,6 +22,11 @@ var nextImg = function(){
 };
 
 $(document).ready(function() {
+
+    //set images status
+    setImagesStatus();
+
+
     $('.sp').first().addClass('activeElem');
     $('.sp').hide();    
     $('.activeElem').fadeIn();

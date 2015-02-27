@@ -46,7 +46,7 @@ display:none;
     position:relative;
     line-height:0px;
 }
-.nbs-flexisel-item img {
+.nbs-flexisel-item img.machine {
     cursor: pointer;
     position: relative;
     margin-top: 10px;
