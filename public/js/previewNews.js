@@ -1,6 +1,6 @@
 function toPreview(){
 
-	var src = $('.newsFormRadio[checked]')[0].value;
+	var src = $('.newsFormRadio:checked')[0].value;
 	var text = $('#newsText').val();
 
 	console.log(src);
