@@ -1,6 +1,43 @@
 var fs = require('fs');
+var mongodb = require('mongodb').MongoClient;
 
+var uri = 'mongodb://admin:administrator@ds033170.mongolab.com:33170/devtestdb';
 var jfile = null;
+
+//receives only lists of data
+function dbInsert(dataList){
+
+	mongodb.connect(uri,function(err,db){
+		if(err === null){
+			var colect = db.collection('news');
+			colect.insert(dataList,function(err,result){
+				if(err !== null){
+					db.close();
+					console.log(err);
+					return false;
+				}
+			});
+			return true;
+		}
+		console.log(err);
+		return false;
+	});
+}
+
+function dbSelectAll(callback){
+	mongodb.connect(uri,function(err,db){
+		if(err === null){
+			var colect = db.collection('news');
+			colect.find({}).toArray(function(err,data){
+				if(err !== null)
+					console.log(err);
+				else
+					callback(data);
+
+			});
+		}
+	});
+}
 
 function convNewsTemplate(model){
 	var prop = Object.keys(model);
@@ -40,25 +77,31 @@ exports.install = function(framework) {
 };
 
 function view_newsForm(){
-
+	var self = this;
+	
 	if(!this.user){
 		this.view('login');
 		return;
-	  }
-	  jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
-	  this.view('newsForm',jfile);
+	}
+	dbSelectAll(function(data){
+		self.view('newsForm',data);
+	});
 }
 
 function view_homepage() {
+	  var self = this;
+	  //jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
+	  dbSelectAll(function(data){
+	  	self.view('homepage',data);
+	  });
 	  
-	  jfile = JSON.parse(fs.readFileSync('contents/newsFile.json','utf8'));
-	  this.view('homepage',jfile);
 }
 
 function post_news(){
 	var model = this.post;
 
-	jfile = [convNewsTemplate(model)].concat(jfile);
+	//jfile = [convNewsTemplate(model)].concat(jfile);
+	dbInsert([convNewsTemplate(model)]);
 	fs.writeFileSync('contents/newsFile.json',JSON.stringify(jfile));
 
 	console.log(model);
@@ -75,7 +118,6 @@ function view_login(){
 
 function post_login(){
 	  var self = this;
-	  console.log(self.post);
 	  //var validate = this.validate(this.post, ['LoginName', 'LoginPassword']);
 	  
 	  console.log('POST');
