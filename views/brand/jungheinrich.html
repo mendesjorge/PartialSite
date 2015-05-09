@@ -32,6 +32,10 @@
 			<img class='machine' src='/img/machines/AM-22-small.png'/>
 			<span>AM 22</span>
 		</li>
+		<li class ='ltp' link='/maquina/EJC-216' status=new>
+			<img class='machine' src='/img/machines/EJC-216-small.png'/>
+			<span>EJC 216/220</span>
+		</li>
 	</ul>
 
 	<p/>
@@ -40,6 +44,7 @@
 
 		$('#slideMaq').hide();
 		$(window).on("load",function(){
+			setImagesStatus();
 			$('#slideMaq').flexisel({
 				clone: false,
 				visibleItems: 4

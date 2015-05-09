@@ -37,6 +37,5 @@ framework.onAuthorization = function(req,res,flags,next){
 
 // server start
 
-
 framework.run(http, debug, port);
 console.log('http://%s:%d/',framework.ip, framework.port);
