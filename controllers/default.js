@@ -1,43 +1,31 @@
 var fs = require('fs');
-var mongodb = require('mongodb').MongoClient;
-
-var uri = 'mongodb://admin:administrator@ds033170.mongolab.com:33170/devtestdb';
+var shared = require('../shared.js');
 var jfile = null;
 
 //receives only lists of data
 function dbInsert(dataList){
-
-	mongodb.connect(uri,function(err,db){
-		if(err === null){
-			var colect = db.collection('news');
-			colect.insert(dataList,function(err,result){
-				if(err !== null){
-					db.close();
-					console.log(err);
-					return false;
-				}
-			});
-			return true;
+	colect = shared.getDBConnection().collection('news');
+	colect.insert(dataList,function(err,result){
+		if(err !== null){
+			console.log(err);
+			return false;
 		}
-		console.log(err);
-		return false;
 	});
 }
 
 function dbSelectAll(callback){
-	mongodb.connect(uri,function(err,db){
-		if(err === null){
-			var colect = db.collection('news');
-			colect.find({}).toArray(function(err,data){
-				if(err !== null)
-					console.log(err);
-				else
-					callback(data);
+	
+	var dbase =shared.getDBConnection();
+	var colect = dbase.collection('news');
+	colect.find({}).toArray(function(err,data){
+		if(err !== null)
+			console.log(err);
+		else
+			callback(data);
 
-			});
-		}
 	});
 }
+
 
 function convNewsTemplate(model){
 	var prop = Object.keys(model);

@@ -1,6 +1,7 @@
 var framework = require('total.js');
 var http = require('http');
 var fs = require('fs');
+var shared = require('./shared.js');
 
 var port = process.env.PORT || 8004;
 var debug = port == 8004;
@@ -35,7 +36,9 @@ framework.onAuthorization = function(req,res,flags,next){
 	next(true);
 };
 
-// server start
+// server start with db
 
-framework.run(http, debug, port);
-console.log('http://%s:%d/',framework.ip, framework.port);
+shared.getDBConnection(function(){
+	framework.run(http, debug, port);
+	console.log('http://%s:%d/',framework.ip, framework.port);
+});

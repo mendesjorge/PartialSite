@@ -10,4 +10,4 @@ function view_brand(name){
     console.log(name);
 	this.view(name);
 	
-};
+}
